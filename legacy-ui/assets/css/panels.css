@@ -1,0 +1,16 @@
+.panel{
+  background:linear-gradient(180deg, rgba(9,24,39,.95), rgba(4,12,22,.95));
+  border:1px solid var(--line); border-radius:var(--radius); padding:16px;
+}
+.panel-title{letter-spacing:.32em; font-weight:900; font-size:13px; margin-bottom:14px}
+.small{font-size:12px;color:var(--muted)}
+.grid{display:grid;gap:10px}
+.card{border:1px solid var(--line); border-radius:12px; background:#06111d; padding:12px}
+.kpi-grid{display:grid; grid-template-columns:repeat(6,1fr); gap:10px}
+.kpi strong{display:block;color:var(--green);font-size:18px}
+.pipeline-tabs{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.pipeline-tabs button{height:44px;border:1px solid var(--line);background:#06111d;color:var(--text);border-radius:10px;font-weight:900}
+.pipeline-tabs button.active{background:var(--green);color:#00140a;border-color:var(--green)}
+.lane-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.lane h3{margin:0 0 8px;text-align:right;letter-spacing:.25em}
+.log{min-height:170px;white-space:pre-wrap;color:var(--green)}

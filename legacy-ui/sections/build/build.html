@@ -1,0 +1,25 @@
+<section class="panel br-panel" data-section="build-request">
+  <div class="panel-title">BUILD REQUEST</div>
+
+  <form class="br-form" autocomplete="off">
+    <div class="br-top-row">
+      <button class="br-mode-toggle" type="button" data-mode="initial_build">Build</button>
+      <select class="br-pod-select" aria-label="Runtime pod"></select>
+    </div>
+
+    <input class="br-job-name" name="job_name" value="factory-sql" placeholder="new job name"/>
+    <select class="br-job-select" name="existing_job" hidden>
+      <option value="">No improvable jobs loaded</option>
+    </select>
+
+    <textarea class="br-objective" name="objective" placeholder="Describe the UI build or improvement..."></textarea>
+
+    <div class="br-status" role="status" aria-live="polite"></div>
+
+    <div class="br-action-row">
+      <button class="br-photo-btn" type="button" title="Upload photo">📷</button>
+      <button class="br-rocket-btn" type="submit" title="Submit build">🚀</button>
+      <button class="br-submit-btn" type="submit">Build</button>
+    </div>
+  </form>
+</section>

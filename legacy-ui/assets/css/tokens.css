@@ -1,0 +1,13 @@
+:root{
+  --bg:#02070d; --panel:#07111f; --panel-2:#091827;
+  --line:#14577a; --line-hot:#1f83b5; --green:#18e66f;
+  --purple:#8b5cf6; --text:#e8f7ff; --muted:#8fb6cc;
+  --danger:#ff4d6d; --radius:14px;
+  --font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:radial-gradient(circle at 55% 10%, #072015 0, transparent 35%), var(--bg);
+  color:var(--text); font-family:var(--font);
+}
+button,select,input,textarea{font-family:inherit}

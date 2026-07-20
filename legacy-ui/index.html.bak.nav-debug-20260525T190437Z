@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>FACTORY.XYZ Runtime C Modular</title>
+  <link rel="stylesheet" href="./assets/css/tokens.css"/>
+  <link rel="stylesheet" href="./assets/css/layout.css"/>
+  <link rel="stylesheet" href="./assets/css/panels.css"/>
+</head>
+<body>
+  <div id="app">
+    <div data-mount="topbar"></div>
+    <main class="shell">
+      <aside class="left-stack">
+        <div data-mount="build"></div>
+        <div data-mount="runQueue"></div>
+      </aside>
+      <section class="center-stack">
+        <div data-mount="systemStats"></div>
+        <div data-mount="runtimePipeline"></div>
+        <div data-mount="eilaOs"></div>
+      </section>
+      <aside class="right-stack">
+        <div data-mount="overwatch"></div>
+        <div data-mount="realJobs"></div>
+      </aside>
+    </main>
+  </div>
+  <script type="module" src="./assets/js/main.js"></script>
+</body>
+</html>

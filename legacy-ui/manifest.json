@@ -1,0 +1,43 @@
+{
+  "name": "runtime-c-live-modular",
+  "version": "0.1.0",
+  "entry": "index.html",
+  "mounts": {
+    "topbar": "sections/topbar/topbar.html",
+    "build": "sections/build/build.html",
+    "runQueue": "sections/run-queue/run-queue.html",
+    "systemStats": "sections/system-stats/system-stats.html",
+    "runtimePipeline": "sections/runtime-pipeline/runtime-pipeline.html",
+    "overwatch": "sections/overwatch/overwatch.html",
+    "eilaOs": "sections/eila-os/eila-os.html",
+    "realJobs": "sections/real-jobs/real-jobs.html"
+  },
+  "services": {
+    "submit": "/runtime-c-submit/submit",
+    "latestRuns": "/assets/ai-sandbox/runtime-c-runs/latest.json",
+    "uiFiles": "https://operator.xyz-labs.xyz/repos/factory-admin/ui-files"
+  },
+  "pods": [
+    {
+      "id": "A",
+      "label": "Pod A",
+      "coder": "qwen-3",
+      "model": "qwen-3",
+      "backend": "A"
+    },
+    {
+      "id": "B",
+      "label": "Pod B",
+      "coder": "qwen-2.5",
+      "model": "qwen-2.5",
+      "backend": "B"
+    },
+    {
+      "id": "C",
+      "label": "Pod C",
+      "coder": "deepseek-coder",
+      "model": "deepseek-coder",
+      "backend": "C"
+    }
+  ]
+}
