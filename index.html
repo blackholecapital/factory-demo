@@ -1,13 +1,194 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>factory-demo</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Runtime C Operator Console</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="grid-bg"></div>
+
+  <header class="topbar">
+    <div class="brand">FACTORY.XYZ <span>V6.7</span></div>
+    <nav class="tabs">
+      <button>FILES</button>
+      <button class="active">Runtime C Operator</button>
+      <button>AI Lounge</button>
+      <button>Runtime Map</button>
+      <button onclick="location.href='/assets/runtime-c-artifacts/index.html'">Artifacts</button>
+      <button>SQL Graph</button>
+      <button>CLI</button>
+    </nav>
+  </header>
+
+  <main class="console">
+    <aside class="left-rail">
+      <section class="panel intake">
+        <div class="panel-title">BUILD SHEET INTAKE</div>
+        <textarea spellcheck="false" placeholder="Paste Runtime C buildsheet JSON here..."></textarea>
+
+        <div class="icon-row">
+          <button class="icon-btn primary" title="Run Build">▶</button>
+          <button class="icon-btn" title="Turbo">⚡</button>
+          <button class="icon-btn" title="Upload Photo">◧</button>
+          <button class="icon-btn" title="Upload Buildsheet">⇧</button>
+        </div>
+
+        <div class="current-build">
+          <div class="small-label">CURRENT BUILD</div>
+          <strong>waiting</strong>
+          <span>no Runtime C run selected</span>
+        </div>
+      </section>
+
+      <section class="panel queue">
+        <div class="panel-title split">
+          <span>SCHEDULED JOBS</span>
+          <span class="pod-tabs"><b class="pod-a">A</b><b class="pod-b">B</b><b class="pod-c">C</b></span>
+        </div>
+
+        <div class="queue-group">
+          <div class="queue-head pod-a">POD A</div>
+          <article class="job-card queued"><button class="kill">×</button><b>sb-bd</b><span>next · initial build</span></article>
+          <article class="job-card queued"><button class="kill">×</button><b>dock-watch</b><span>#2 · variant wave</span></article>
+        </div>
+
+        <div class="queue-group">
+          <div class="queue-head pod-b">POD B</div>
+          <article class="job-card queued"><button class="kill">×</button><b>clinic-flow</b><span>next · pass 3</span></article>
+        </div>
+
+        <div class="queue-group">
+          <div class="queue-head pod-c">POD C</div>
+          <article class="job-card queued"><button class="kill">×</button><b>graph-refresh</b><span>lineage seed</span></article>
+        </div>
+      </section>
+    </aside>
+
+    <section class="center-stage">
+      <section class="panel metrics-hero">
+        <div class="metric-grid">
+          <div class="chip"><span>CPU</span><b>2.34</b><em>12c · 2%</em></div>
+          <div class="chip"><span>RAM</span><b>8%</b><em>22.8G / 512G</em></div>
+          <div class="chip"><span>SIDECAR</span><b>3%</b><em>ready</em></div>
+          <div class="chip warn"><span>CORE</span><b>9/1</b><em>degraded</em></div>
+          <div class="chip"><span>SERVER CPU</span><b>8.4%</b><em>28c</em></div>
+          <div class="chip"><span>SERVER RAM</span><b>58.9%</b><em>61 / 103G</em></div>
+          <div class="chip pod-a-chip"><span>POD A</span><b>RX 5600 XT</b><em>VRAM 6128M · idle</em></div>
+          <div class="chip pod-b-chip"><span>POD B</span><b>RX 6800</b><em>VRAM 7882M · qwen hot</em></div>
+          <div class="chip pod-c-chip"><span>POD C</span><b>qwen2.5-coder:14b</b><em>standby · pod authority</em></div>
+        </div>
+
+        <div class="atom-wrap">
+          <div class="atom" aria-label="Runtime C atom">
+            <div class="nucleus">6.7</div>
+            <div class="ring r1"><i></i></div>
+            <div class="ring r2"><i></i></div>
+            <div class="ring r3"><i></i></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel pipeline">
+        <button>SUBMIT</button>
+        <button>QUEUE</button>
+        <button class="active">LANES</button>
+        <button>RESOLVE</button>
+        <button>CORE7</button>
+        <button>DEPLOY</button>
+      </section>
+
+      <section class="lane-grid">
+        <article class="lane-card running" data-lane="WA">
+          <span>WA</span><b>HTML</b>
+          <em><i>waiting</i><i>--:--</i></em>
+          <div class="lane-metrics"><small>events 0</small><small>UNKNOWN</small><small>--:--</small></div>
+          <div class="bar"><i></i></div>
+        </article>
+
+        <article class="lane-card running" data-lane="WB">
+          <span>WB</span><b>VISUAL</b>
+          <em><i>waiting</i><i>--:--</i></em>
+          <div class="lane-metrics"><small>events 0</small><small>UNKNOWN</small><small>--:--</small></div>
+          <div class="bar"><i></i></div>
+        </article>
+
+        <article class="lane-card running" data-lane="WC">
+          <span>WC</span><b>JS</b>
+          <em><i>waiting</i><i>--:--</i></em>
+          <div class="lane-metrics"><small>events 0</small><small>UNKNOWN</small><small>--:--</small></div>
+          <div class="bar"><i></i></div>
+        </article>
+
+        <article class="lane-card running" data-lane="WD">
+          <span>WD</span><b>MANIFEST</b>
+          <em><i>waiting</i><i>--:--</i></em>
+          <div class="lane-metrics"><small>events 0</small><small>UNKNOWN</small><small>--:--</small></div>
+          <div class="bar"><i></i></div>
+        </article>
+
+        <article class="lane-card running" data-lane="WE">
+          <span>WE</span><b>VALIDATE</b>
+          <em><i>waiting</i><i>--:--</i></em>
+          <div class="lane-metrics"><small>events 0</small><small>UNKNOWN</small><small>--:--</small></div>
+          <div class="bar"><i></i></div>
+        </article>
+
+        <article class="lane-card running" data-lane="WF">
+          <span>WF</span><b>REVIEW</b>
+          <em><i>waiting</i><i>--:--</i></em>
+          <div class="lane-metrics"><small>events 0</small><small>UNKNOWN</small><small>--:--</small></div>
+          <div class="bar"><i></i></div>
+        </article>
+      </section>
+
+      <section class="core-row">
+        <article class="mini-card"><span>C7</span><b>CORE7 · HTML</b><em><i>vote pending</i><i>--:--</i></em><div class="bar ghost"><i></i></div></article>
+        <article class="mini-card"><span>C7</span><b>CORE7 · VISUAL</b><em><i>vote pending</i><i>--:--</i></em><div class="bar ghost"><i></i></div></article>
+        <article class="mini-card"><span>C7</span><b>CORE7 · JS</b><em><i>vote pending</i><i>--:--</i></em><div class="bar ghost"><i></i></div></article>
+      </section>
+
+      <section class="bottom-row">
+        <div class="panel observer-wide">
+          <div class="panel-title">OPERATOR FEED</div>
+          <div class="observer-line">waiting for Runtime C data</div>
+        </div>
+
+        <div class="panel os-window">
+<pre class="ascii">
+███████╗██╗██╗      █████╗      ██████╗ ███████╗
+██╔════╝██║██║     ██╔══██╗    ██╔═══██╗██╔════╝
+█████╗  ██║██║     ███████║    ██║   ██║███████╗
+██╔══╝  ██║██║     ██╔══██║    ██║   ██║╚════██║
+███████╗██║███████╗██║  ██║    ╚██████╔╝███████║
+╚══════╝╚═╝╚══════╝╚═╝  ╚═╝     ╚═════╝ ╚══════╝
+
+RUNTIME C · PTY SESSION
+</pre>
+          <button class="connect">Connect PTY</button>
+        </div>
+      </section>
+    </section>
+
+    <aside class="right-rail">
+      <section class="panel overwatch">
+        <div class="panel-title">EILA · OVERWATCH</div>
+        <div class="watch-box"><pre>waiting for Runtime C stream...</pre></div>
+        <div class="mode-buttons">
+          <button class="active">Stream</button>
+          <button>TPS</button>
+          <button>EILA</button>
+          <button>Enter</button>
+        </div>
+      </section>
+
+      <section class="panel recent">
+        <div class="panel-title">RECENT JOBS</div>
+      </section>
+    </aside>
+  </main>
+
+  <script src="./app.js?v=returnfix3"></script>
+</body>
 </html>
