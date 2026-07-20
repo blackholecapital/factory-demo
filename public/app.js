@@ -93,9 +93,16 @@ async function submit(){
 
   const ta=$(".intake textarea"), feed=$(".observer-wide");
   const log=m=>{ const line=`${new Date().toLocaleTimeString()} · ${m}`; if(feed) feed.innerHTML=`<div class="panel-title">OPERATOR FEED</div><div class="observer-line">${line}</div>`+feed.innerHTML; console.log("[runtime-c-submit]",m); };
-  let payload;
-  try{ payload=JSON.parse(ta.value); }
-  catch(e){ log("SUBMIT REJECTED · invalid JSON · "+e.message); return; }
+ const prompt = ta.value.trim();
+
+if (!prompt) {
+  log("SUBMIT REJECTED · empty build request");
+  return;
+}
+
+const payload = {
+  prompt
+};
 
   pipe("QUEUE");
   log("SUBMIT CLICKED · sending buildsheet");
